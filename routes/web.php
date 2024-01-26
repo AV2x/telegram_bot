@@ -4,6 +4,7 @@ use App\Facades\Telegram;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +15,9 @@ use App\Http\Controllers\LoginController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function (){
-    return view('welcome');
-});
-Route::any('/api/authenticate', [LoginController::class, 'authenticate']);
-Route::get('telegram-authenticate', [LoginController::class, 'telegramAuth'])->middleware('auth');
+Route::get('/', [ProductController::class, 'index']);
+//Route::any('/api/authenticate', [LoginController::class, 'authenticate']);
+//Route::get('telegram-authenticate', [LoginController::class, 'telegramAuth'])->middleware('auth');
 Route::get('/webhook-data', function (\App\Telegram\Webhook\Webhook $webhook){
     dd(\Illuminate\Support\Facades\Cache::get('webhook-data'));
 });

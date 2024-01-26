@@ -2,20 +2,18 @@
 
 namespace App\Telegram\Webhook;
 
-use App\Telegram\Webhook\Commands\EditProfile;
 use App\Telegram\Webhook\Commands\Start;
 use App\Telegram\Webhook\Documents\Document;
 use App\Telegram\Webhook\Photo\Photo;
 use App\Telegram\Webhook\Text\Text;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
+
 
 class Realization
 {
 
     protected const Commands = [
-        '/start' => Start::class,
-        '/edit_profile' => EditProfile::class,
+        '/start' => Start::class
     ];
 
     public function take(Request $request)
