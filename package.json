@@ -1,0 +1,27 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "axios": "^1.3.4",
+        "bootstrap": "^5.2.3",
+        "laravel-vite-plugin": "^0.7.2",
+        "sass": "^1.56.1",
+        "vite": "^4.0.0",
+        "vue": "^3.2.37"
+    },
+    "dependencies": {
+        "@vuepic/vue-datepicker": "^4.0.1",
+        "echarts": "^5.4.1",
+        "latest": "^0.2.0",
+        "vue-echarts": "^6.5.4",
+        "vue-router": "^4.1.6",
+        "vue3-highcharts": "^0.1.3",
+        "vuetify": "^3.1.5",
+        "vuedraggable": "^4.1.0"
+    }
+}
